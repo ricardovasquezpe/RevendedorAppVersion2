@@ -62,7 +62,7 @@ export const Footer = () => {
                     <Text>Creado con</Text>
                     <FontAwesomeIcon icon={faHeart} className={styles.pulseHeart}/>
                     <Text>por</Text>
-                    <p>RevendedorApp @2024</p>
+                    <p>RevendedorApp @{new Date().getFullYear()}</p>
                 </HStack>
             </Center>
         </>

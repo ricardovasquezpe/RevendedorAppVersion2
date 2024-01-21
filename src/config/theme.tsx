@@ -16,7 +16,7 @@ const theme = extendTheme({
       }),
     },
     radii:{
-      custom: "0.313rem"
+      custom: "0.625rem"
     },
     colors: {
       primary: {
