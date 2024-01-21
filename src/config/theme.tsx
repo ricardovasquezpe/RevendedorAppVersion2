@@ -5,12 +5,13 @@ const theme = extendTheme({
         global: (props: any) => ({
           body: {
             bg: 'primary.default',
+            color: "white"
           },
           '.chakra-modal__close-btn': {
             color: 'white',
           },
           html: {
-            fontSize: "18px",
+            fontSize: "18px"
           }
         }),
     },
