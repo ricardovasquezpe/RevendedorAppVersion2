@@ -1,10 +1,11 @@
-import { Box, Center, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Center, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { MyButton } from "../myButton/myButton";
 import styles from "./footer.module.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareFacebook, faSquareInstagram, faSquareTwitter, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const Footer = () => {
     return (
@@ -57,7 +58,12 @@ export const Footer = () => {
                 </SimpleGrid>
             </Box>
             <Center h='70px' color='white.half'>
-                <p>@2024 RevendedorApp</p>
+                <HStack>
+                    <Text>Creado con</Text>
+                    <FontAwesomeIcon icon={faHeart} className={styles.pulseHeart}/>
+                    <Text>por</Text>
+                    <p>RevendedorApp @2024</p>
+                </HStack>
             </Center>
         </>
     );

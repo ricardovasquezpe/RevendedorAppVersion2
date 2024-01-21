@@ -12,7 +12,7 @@ const theme = extendTheme({
         },
         html: {
           fontSize: "18px"
-        }
+        },
       }),
     },
     radii:{
