@@ -2,7 +2,7 @@ import { useDisclosure, Flex, Box, Button,  VStack, Icon, HStack } from "@chakra
 import { HamburgerIcon } from '@chakra-ui/icons'
 import style from "./header.module.scss";
 import { Link } from "react-router-dom";
-import { MyDrawer } from "./drawer";
+import { MyDrawer } from "./myDrawer";
 
 export const MobileDrawer = (props: any) =>  {
   const { isOpen, onOpen, onClose } = useDisclosure();

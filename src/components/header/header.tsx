@@ -2,6 +2,7 @@ import styles from './header.module.scss'
 import {  Image, Flex, Button,  HStack , chakra, Hide } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { MobileDrawer } from './mobile-drawer';
+import { MyModal } from '../myModal/myModal';
 
 export const Header = (props: any) => {
     const menuLinks = [
@@ -32,6 +33,7 @@ export const Header = (props: any) => {
                                 {item.label}
                             </Link>
                         ))}
+                        <MyModal></MyModal>
                     </HStack>
                 </Hide>
                 <Hide above='md'>

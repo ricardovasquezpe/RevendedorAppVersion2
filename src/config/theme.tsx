@@ -10,6 +10,9 @@ const theme = extendTheme({
         '.chakra-modal__close-btn': {
           color: 'white',
         },
+        '.chakra-modal__content': {
+          borderRadius: "custom !important"
+        },
         html: {
           fontSize: "18px"
         },
@@ -21,7 +24,8 @@ const theme = extendTheme({
     colors: {
       primary: {
         default: "#002E39",
-        ligth: "#0F3942"
+        ligth: "#0F3942",
+        half: "#002e3978"
       },
       secondary: {
         default: "#0093D3",
