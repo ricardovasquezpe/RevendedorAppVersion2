@@ -1,0 +1,13 @@
+.menuLink {
+    color: white;
+    font-family: "robotoBold";
+}
+
+.menuLink:hover{
+    color: var(--chakra-colors-secondary-default);
+}
+
+.header{
+    background-color: var(--chakra-colors-primary-default);
+    border-bottom: 1px var(--chakra-colors-secondary-half) solid;
+}

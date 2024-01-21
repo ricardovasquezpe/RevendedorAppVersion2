@@ -1,0 +1,7 @@
+.parent a{
+    color: white;
+}
+
+.parent a:hover{
+    color: var(--chakra-colors-secondary-default);
+}
