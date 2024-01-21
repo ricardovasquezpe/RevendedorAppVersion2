@@ -1,19 +1,22 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
-      styles: {
-        global: (props: any) => ({
-          body: {
-            bg: 'primary.default',
-            color: "white"
-          },
-          '.chakra-modal__close-btn': {
-            color: 'white',
-          },
-          html: {
-            fontSize: "18px"
-          }
-        }),
+    styles: {
+      global: (props: any) => ({
+        body: {
+          bg: 'primary.default',
+          color: "white"
+        },
+        '.chakra-modal__close-btn': {
+          color: 'white',
+        },
+        html: {
+          fontSize: "18px"
+        }
+      }),
+    },
+    radii:{
+      custom: "0.313rem"
     },
     colors: {
       primary: {
@@ -22,7 +25,8 @@ const theme = extendTheme({
       },
       secondary: {
         default: "#0093D3",
-        half: "#0093d382"
+        half: "#0093d382",
+        dark: "#0075a8"
       },
       white: {
         half: "#ffffff87"

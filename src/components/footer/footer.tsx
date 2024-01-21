@@ -1,7 +1,10 @@
 import { Box, Center, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import styles from "./footer.module.css";
 import { MyButton } from "../myButton/myButton";
+import styles from "./footer.module.css";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareFacebook, faSquareInstagram, faSquareTwitter, faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
     return (
@@ -18,17 +21,34 @@ export const Footer = () => {
                     </Box>
                     <Box>
                         <VStack align={{"sm": "center", "md": "start"}}>
-                            <Link to={"/"}>Facebook</Link>
-                            <Link to={"/"}>Instagram</Link>
-                            <Link to={"/"}>Twitter</Link>
-                            <Link to={"/"}>Tiktok</Link>
+                            <Link to={"/"}>
+                                <FontAwesomeIcon icon={faSquareFacebook} />
+                                <Text className={styles.brands}>Facebook</Text>
+                            </Link>
+                            <Link to={"/"}>
+                                <FontAwesomeIcon icon={faSquareInstagram} />
+                                <Text className={styles.brands}>Instagram</Text>
+                            </Link>
+                            <Link to={"/"}>
+                                <FontAwesomeIcon icon={faSquareTwitter} />
+                                <Text className={styles.brands}>Twitter</Text>
+                            </Link>
+                            <Link to={"/"}>
+                                <FontAwesomeIcon icon={faTiktok} />
+                                <Text className={styles.brands}>Tiktok</Text>
+                            </Link>
                         </VStack>
                     </Box>
-                    <Center>
+                    <Center className="">
                         <VStack>
-                            <Text align={"center"} fontSize={"15px"} color={"white.half"} mb={"10px"}>No pierdas la oportunidad de ver a tu artista favorito</Text>
+                            <Text
+                                  align={"center"} 
+                                  fontSize={"15px"} 
+                                  color={"white.half"} 
+                                  mb={"10px"}>No pierdas la oportunidad de ver a tu artista favorito</Text>
                             <MyButton textColor="white" 
                                     backgroundColor="secondary.default" 
+                                    backgroundColorHover="secondary.dark" 
                                     title={"Registrate ahora!"}
                                     fontSize="22px"
                                     padding="20px 35px 20px 35px"></MyButton>

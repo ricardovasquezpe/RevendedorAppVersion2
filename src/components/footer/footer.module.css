@@ -5,3 +5,8 @@
 .parent a:hover{
     color: var(--chakra-colors-secondary-default);
 }
+
+.brands{
+    margin-left: 5px;
+    display: inline;
+}

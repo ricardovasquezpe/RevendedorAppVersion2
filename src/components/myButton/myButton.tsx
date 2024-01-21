@@ -6,10 +6,11 @@ export const MyButton = (props: Props) => {
             <Button bg={props.backgroundColor} 
                     color={props.textColor} 
                     fontWeight={"normal"} 
-                    borderRadius={"0.313rem"} 
-                    _hover={{bg: props.backgroundColor}}
+                    borderRadius={"custom"} 
+                    _hover={{bg: props.backgroundColorHover, transition: "background 0.3s ease-in-out"}}
                     fontSize={props.fontSize}
-                    padding={props.padding}>
+                    padding={props.padding}
+                    className={props.className}>
                 {props.title}
             </Button>
         </>
@@ -19,7 +20,9 @@ export const MyButton = (props: Props) => {
 type Props = {
     title: string,
     backgroundColor: string,
+    backgroundColorHover: string,
     textColor: string,
     fontSize: string,
-    padding: string
+    padding: string,
+    className? : string | undefined
 };
