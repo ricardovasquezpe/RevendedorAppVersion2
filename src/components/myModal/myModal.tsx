@@ -3,12 +3,9 @@ import styles from "./myModal.module.css";
 import { MyButton } from "../myButton/myButton";
 
 export const MyModal = (props: Props) => {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-
     return (
         <>
-            <Button onClick={onOpen}>Open Modal</Button>
-            <Modal isOpen={isOpen} onClose={onClose} size={"sm"} isCentered>
+            <Modal isOpen={true} onClose={props.onClose} size={"sm"} isCentered>
                 <ModalOverlay />
                 <ModalContent className={styles.content} bg={"primary.default"}>
                     <ModalHeader className={styles.header}>Iniciar Sesion</ModalHeader>
@@ -23,6 +20,7 @@ export const MyModal = (props: Props) => {
                                         title={"Iniciar Sesion"}
                                         fontSize="18px"
                                         padding="20px"></MyButton>
+                        <button onClick={props.onCancel}>Cerrar</button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
@@ -31,5 +29,7 @@ export const MyModal = (props: Props) => {
 };
 
 type Props = {
-    
+    onCancel: () => void,
+    onClose: () => void,
+    onSave: () => void
 };

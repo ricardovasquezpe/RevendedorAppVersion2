@@ -10,7 +10,8 @@ export const MyButton = (props: Props) => {
                     _hover={{bg: props.backgroundColorHover, transition: "background 0.3s ease-in-out"}}
                     fontSize={props.fontSize}
                     padding={props.padding}
-                    className={props.className}>
+                    className={props.className}
+                    onClick={props.onClick}>
                 {props.title}
             </Button>
         </>
@@ -24,5 +25,6 @@ type Props = {
     textColor: string,
     fontSize: string,
     padding: string,
-    className? : string | undefined
+    className? : string | undefined,
+    onClick?: () => void
 };
